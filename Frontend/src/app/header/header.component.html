@@ -1,0 +1,18 @@
+<div class="container">
+    <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
+      <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
+        <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"/></svg>
+        <span class="fs-4">Find a pet</span>
+      </a>
+
+      <ul class="nav nav-pills">
+        <li class="nav-item" *ngIf="!isAuthenticated()"><a routerLink="/login" class="nav-link" >Login</a></li>
+        <li class="nav-item" *ngIf="!isAuthenticated()"><a routerLink="/register" class="nav-link">Register</a></li>
+        <li class="nav-item" *ngIf="isAuthenticated()"><a routerLink="/home" class="nav-link" >Home</a></li>
+        <li class="nav-item" *ngIf="isAuthenticated()"><a routerLink="/post" class="nav-link" >Post a Pet</a></li>
+        <li class="nav-item" *ngIf="isAuthenticated()"><a routerLink="/pets" class="nav-link">Available Pets</a></li>
+        <li class="nav-item" *ngIf="isAuthenticated()"><a routerLink="/apply" class="nav-link" >Application</a></li>
+        <li class="nav-item" *ngIf="isAuthenticated()"><a routerLink="" (click)="logoutUser()" class="nav-link" >Logout</a></li>
+      </ul>
+    </header>
+  </div>
